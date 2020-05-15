@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Петр Слободин](https://up.htmlacademy.ru/htmlcss/28/user/1282193).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Мулярчик] (https://htmlacademy.ru/profile/ivanmuliarchyk).
 
 ---
 
