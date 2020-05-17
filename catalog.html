@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
 </head>
 <body>
-    <header>
+  <header>
         <nav>
           <p>
           <a href="index.html"><img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Техномарт"></a></p>
@@ -49,19 +49,78 @@
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div> 
         </nav>
-    </header>
-    <main>
-        <div class="breadcrumb">
-          <ul>
+  </header>
+
+  <main>
+      <div class="breadcrumb">
+        <ul>
             <li><a href="catalog.html">Каталог</a></li>
             <li><a href="">Инструмент</a></li>
             <li><a href="">Перфораторы</a></li>
-          </ul>
+        </ul>
+      </div>
+        <!-- не разобрался, как сделать скрытым заголовок, сказали пока что можно их не учитывть
+          <h1></h1>-->
+      <!--ФИЛЬТР-->
+      <div class="left-filter">
+        <p>Фильтр:</p>
+        <p>Сортировка:
+        <button><span class="red">По цене</button>
+        <button>По типу</button>
+        <button>По функционалу</button>
+        </p>
+        <!--форма кнопок сортировки сверху вниз и наоборот-->
+        <button></button>
+        <button></button>
+      </div>
+      <div class="left-filter">
+        <h3>Цена:</h3>
+         <!--Тут должна быть форма с ползунком-->
         </div>
-          <!-- не разобрался, как сделать скрытым заголовок, сказали пока что можно их не учитывть
-            <h1></h1>
-          -->
-          <section>
+      <div class="left-filter">
+        <span class="filter-part">Производители:</span>
+        <div class="content">
+        <label class="text">
+         <span>Bosch</span>
+         <input type="checkbox" value="Bosch">
+        </label>
+        <label class="text">
+          <span>Интерскол</span>
+          <input type="checkbox" value="Интерскол">
+        </label>
+        <label class="text">
+          <span>Makita</span>
+          <input type="checkbox" value="Makita">
+        </label>
+        <label class="text">
+          <span>Dewalt</span>
+          <input type="checkbox" value="Dewalt">
+        </label>
+        <label class="text">
+          <span>Hitachi</span>
+          <input type="checkbox" value="Hitachi">
+        </label>
+        </div>
+        <div class="left-filter">
+        <span class="filter-part">Питание:</span>
+        <div class="content">
+        <form action="input">
+         <label class="text">
+         <span>Аккумуляторные</span>
+         <input type="radio" name="питание" value="Аккумуляторные">
+          </label>
+          <label class="text">
+          <span>Сетевые</span>
+          <input type="radio" name="питание" value="Сетевые">
+        </label>
+        </form>
+        </div>
+        <form action="https://echo.htmlacademy.ru/">
+        <button>Показать</button>
+        </form>
+        </div>
+      </div>
+        <section>
             <h2>Перфораторы</h2>
             <ul>
               <li>
@@ -163,55 +222,21 @@
                   </p>
               </li>
             </ul>
-          </section>
-          <div class="left-filter">
-            <span class="filter-part">Производители:</span>
-            <div class="content">
-              <label class="text">
-                <span>Bosch</span>
-                <input type="checkbox" value="Bosch">
-                </label>
-              <label class="text">
-                <span>Интерскол</span>
-                <input type="checkbox" value="Интерскол">
-              </label>
-              <label class="text">
-                <span>Makita</span>
-                <input type="checkbox" value="Makita">
-              </label>
-              <label class="text">
-                <span>Dewalt</span>
-                <input type="checkbox" value="Dewalt">
-              </label>
-              <label class="text">
-                <span>Hitachi</span>
-                <input type="checkbox" value="Hitachi">
-              </label>
-            </div>
-          </div>
-          <div class="left-filter">
-            <span class="filter-part">Питание:</span>
-            <div class="content">
-              <form action="input">
-              <p>
-              <label class="text">
-                <span>Аккумуляторные</span>
-                <input type="radio" name="питание" value="Аккумуляторные">
-              </label>
-              <label class="text">
-                <span>Сетевые</span>
-                <input type="radio" name="питание" value="Сетевые">
-              </label>
-            </p>
-            </form>
-            </div>
-            <form action="https://echo.htmlacademy.ru/">
-            <button>Показать</button>
-            </form>
-          </div>
-    </main>
+        </section>
+          <!--переключалка страниц каталога-->
+      <div class="buttons">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>Следующая</button>
+      </div> 
+        <h2>Пара слов о перфораторах</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br> 
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+  </main>
 
-    <footer>
+  <footer>
       <section class="footer-navigation">
         <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Техномарт">
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
@@ -257,7 +282,7 @@
   
         <div>
         <p>Обратная свзять:<br>
-        <span class="yellow">mail@htmlacademy.ru</span></p>
+        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
         </div>
         <p>
         Разработано –<br>
@@ -265,6 +290,7 @@
         </p>
       </section>  
     
-    </footer>
+  </footer>
+  
 </body>
 </html>
