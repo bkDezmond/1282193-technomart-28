@@ -10,7 +10,7 @@
         <p>
           <a href="index.html">
             <img
-              src="img/logo-techmart.png"
+              src="img/logo-technomart.svg"
               width="220"
               height="47"
               alt="Техномарт"
@@ -18,19 +18,11 @@
           </a>
         </p>
         <div class="search-button">
-          <img src="img/icon-search.svg" width="17" height="17" alt="Поиск" />
           <form action="search" method="get">
             <input type="text" placeholder="Поиск" />
             <button type="submit"></button>
           </form>
-          <img
-            src="img/icon-bookmark.svg"
-            width="14"
-            height="16"
-            alt="закладки"
-          />
           <a href="">Закладки:</a>
-          <img src="img/icon-cart.svg" width="15" height="15" alt="Корзина" />
           <a href="">Корзина:</a>
         </div>
         <div>
@@ -45,14 +37,7 @@
         </p>
         <!--Личный кабинет-->
         <div class="lk">
-          <img
-            src="img/icon-user.svg"
-            width="20"
-            height="18"
-            alt="Пользователь"
-          />
           <a href="">Равшан Джамшутович</a>
-          <img src="img/icon-logout.svg" width="20" height="17" alt="Выйти" />
         </div>
         <div>
           <ul>
@@ -71,12 +56,7 @@
         </ul>
         <div>
           <p>
-            <img
-              src="img/icon-phone.svg"
-              width="17"
-              height="17"
-              alt="Телефон"
-            /><span class="red">+7 (812) 555-05-55</span>
+            <span class="red">+7 (812) 555-05-55</span>
           </p>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
@@ -87,14 +67,7 @@
       <div class="breadcrumb">
         <ul>
           <li>
-            <a href="index.html"
-              ><img
-                src="img/icon-home.svg"
-                width="14"
-                height="12"
-                alt="Домой"
-              />
-            </a>
+            <a href="index.html">Домой</a>
           </li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="">Инструмент</a></li>
@@ -112,63 +85,50 @@
           <button>По функционалу</button>
         </p>
         <!--форма кнопок сортировки сверху вниз и наоборот-->
-        <button>
-          <img
-            src="img/icon-up-dir.svg"
-            width="11"
-            height="10"
-            alt="снизу вверх"
-          />
-        </button>
-        <button>
-          <img
-            src="img/icon-down-dir.svg"
-            width="11"
-            height="10"
-            alt="сверху вниз"
-          />
-        </button>
+        <button></button>
+        <button></button>
       </div>
       <div class="left-filter">
         <h3>Цена:</h3>
         <!--Тут должна быть форма с ползунком-->
       </div>
       <div class="left-filter">
-        <!--Пока что убрал input, на консультации спрошу-->
         <span class="filter-part">Производители:</span>
         <div class="content">
           <label class="text">
-            <img src="img/checkbox-on.svg" width="27" height="23" alt="вкл" />
             <span>Bosch</span>
+            <input type="checkbox" value="Bosch" />
           </label>
           <label class="text">
-            <img src="img/checkbox-off.svg" width="23" height="23" alt="выкл" />
             <span>Интерскол</span>
+            <input type="checkbox" value="Интерскол" />
           </label>
           <label class="text">
-            <img src="img/checkbox-on.svg" width="27" height="23" alt="вкл" />
             <span>Makita</span>
+            <input type="checkbox" value="Makita" />
           </label>
           <label class="text">
-            <img src="img/checkbox-off.svg" width="23" height="23" alt="выкл" />
             <span>Dewalt</span>
+            <input type="checkbox" value="Dewalt" />
           </label>
           <label class="text">
-            <img src="img/checkbox-off.svg" width="23" height="23" alt="выкл" />
             <span>Hitachi</span>
+            <input type="checkbox" value="Hitachi" />
           </label>
         </div>
         <div class="left-filter">
           <span class="filter-part">Питание:</span>
           <div class="content">
-            <label class="text">
-              <img src="img/radio-on.svg" width="25" height="25" alt="вкл" />
-              <span>Аккумуляторные</span>
-            </label>
-            <label class="text">
-              <img src="img/radio-off.svg" width="25" height="25" alt="выкл" />
-              <span>Сетевые</span>
-            </label>
+            <form action="input">
+              <label class="text">
+                <span>Аккумуляторные</span>
+                <input type="radio" name="питание" value="Аккумуляторные" />
+              </label>
+              <label class="text">
+                <span>Сетевые</span>
+                <input type="radio" name="питание" value="Сетевые" />
+              </label>
+            </form>
           </div>
           <form action="https://echo.htmlacademy.ru/">
             <button>Показать</button>
@@ -215,15 +175,7 @@
             </p>
           </li>
           <li>
-            <button type="button">
-              <img
-                src="img/icon-cart.svg"
-                width="15"
-                height="15"
-                alt="Купить"
-              />
-              Купить
-            </button>
+            <button type="button">Купить</button>
             <button type="submit">В Закладки</button>
             <a href="">
               <h3>
@@ -366,9 +318,9 @@
     <footer>
       <section class="footer-navigation">
         <img
-          src="https://via.placeholder.com/150x100"
-          width="150"
-          height="100"
+          src="img/logo-technomart.svg"
+          width="220"
+          height="68"
           alt="Техномарт"
         />
         <p>
@@ -405,31 +357,13 @@
         <div>
           <ul>
             <li>
-              <a href=""
-                ><img
-                  src="img/icon-vk.svg"
-                  width="26"
-                  height="15"
-                  alt="Вконтакте"
-              /></a>
+              <a href="">Вконтакте</a>
             </li>
             <li>
-              <a href=""
-                ><img
-                  src="img/icon-fb.svg"
-                  width="12"
-                  height="22"
-                  alt="Фейсбук"
-              /></a>
+              <a href="">Фейсбук</a>
             </li>
             <li>
-              <a href=""
-                ><img
-                  src="img/icon-insta.svg"
-                  width="21"
-                  height="21"
-                  alt="Инстаграм"
-              /></a>
+              <a href="">Инстаграм</a>
             </li>
           </ul>
         </div>
