@@ -91,7 +91,7 @@
             <legend>Производители:</legend>
             <ul>
               <li>
-              <label for="Bosch">Bosch</label>
+                <label for="Bosch">Bosch</label>
                 <input type="checkbox" name="Bosch" id="Bosch" checked />
               </li>
               <li>
@@ -99,33 +99,59 @@
                 <input type="checkbox" name="Interskol" id="Interskol" />
               </li>
               <li>
-                <legend for="Makita">Makita</legend>
-                <input type="checkbox" name="Makita" id="Makita" value="Makita" checked />
+                <label for="Makita">Makita</label>
+                <input
+                  type="checkbox"
+                  name="Makita"
+                  id="Makita"
+                  value="Makita"
+                  checked
+                />
               </li>
               <li>
-                <legend for="Dewalt">Dewalt</legend>
-                <input type="checkbox" name="Dewalt" id="Dewalt" value="Dewalt" />
+                <label for="Dewalt">Dewalt</label>
+                <input
+                  type="checkbox"
+                  name="Dewalt"
+                  id="Dewalt"
+                  value="Dewalt"
+                />
               </li>
               <li>
-                <legend for="Hitachi">Hitachi</legend>
-                <input type="checkbox" name="Hitachi" id="Hitachi" value="Hitachi" />
+                <label for="Hitachi">Hitachi</label>
+                <input
+                  type="checkbox"
+                  name="Hitachi"
+                  id="Hitachi"
+                  value="Hitachi"
+                />
               </li>
             </ul>
-            </fieldset>
-            <fieldset>
-              <legend>Питание:</legend>
-              <ul>
-                <li>                    
-                  <label for="filter-rechargeable">Аккумуляторные</label>
-                  <input type="radio" name="power" value="rechargeable" id="filter-rechargeable" />
-                  </li>   
-                  <li>  
-                  <legend for="filter-non-rechargeable">Сетевые</span>
-                  <input type="radio" name="power" value="non-rechargeable" id="filter-non-rechargeable" />
-                  </li>  
-                </ul>
-            </fieldset>
-                <button type="submit">Показать</button>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li>
+                <label for="filter-rechargeable">Аккумуляторные</label>
+                <input
+                  type="radio"
+                  name="power"
+                  value="rechargeable"
+                  id="filter-rechargeable"
+                />
+              </li>
+              <li>
+                <label for="filter-non-rechargeable">Сетевые</label>
+                <input
+                  type="radio"
+                  name="power"
+                  value="non-rechargeable"
+                  id="filter-non-rechargeable"
+                />
+              </li>
+            </ul>
+          </fieldset>
+          <button type="submit">Показать</button>
         </form>
       </section>
       <!--/фильтр-->
@@ -367,11 +393,9 @@
     <!--Попап Товар добавлен в корзину-->
     <section>
       <h3>Товар добавлен в корзину!</h3>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <button type="submit">Закрыть</button>
-        <button type="submit">Оформить заказ</button>
-        <button type="submit">Продолжить покупки</button>
-      </form>
+      <button type="submit">Закрыть</button>
+      <button type="submit">Продолжить покупки</button>
+      <a href="">Оформить заказ</a>
     </section>
   </body>
 </html>
