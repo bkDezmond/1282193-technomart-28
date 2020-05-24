@@ -375,5 +375,56 @@
         </p>
       </section>
     </footer>
+    <!--Попап карта-->
+    <section>
+      <div class="map-container">
+        <img
+          src="img/PopUpMap.png"
+          width="150"
+          height="100"
+          alt="Карта магазина по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+        />
+        <button type="submit">Закрыть</button>
+      </div>
+    </section>
+    <!--/Попап карта-->
+    <!--оформить заказ-->
+    <section>
+      <h2 hidden></h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label for="your-name">Ваше имя:</label>
+          <input
+            id="your-name"
+            type="text"
+            name="name"
+            placeholder="Имя Фамилия"
+            required
+          />
+          <label for="email-email">Ваш e-mail:</label>
+          <input
+            id="email-email"
+            type="email"
+            name="mail"
+            placeholder="email@example.com"
+            required
+          />
+        </p>
+        <p>
+          <!--нужно подумать над полем ввода текста письма-->
+          <label for="text-message">Текст письма:</label><br />
+          <input
+            id="text-message"
+            type="text"
+            name="message"
+            placeholder="В свободной форме"
+          />
+        </p>
+        <button type="submit">Отправить</button>
+        <!--кнопка закрыть попап-->
+        <button type="submit">Закрыть</button>
+      </form>
+    </section>
+    <!--/оформить заказ-->
   </body>
 </html>

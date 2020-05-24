@@ -49,7 +49,7 @@
         </ul>
         <div>
           <p>
-            <span class="red">+7 (812) 555-05-55</span>
+            <a href="tel:+7(812)555-05-55">+7 (812) 555-05-55</a>
           </p>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
@@ -82,55 +82,52 @@
       </div>
       <!--/сортировка-->
       <!--фильтр-->
-      <div>
+      <section>
         <p>Фильтр:</p>
-        <div class="left-filter"></div>
-        <h3>Цена:</h3>
-        <!--Тут будет ползунок, label и form пока не убирал, жду лекции css-->
-        <div class="left-filter">
-          <span class="filter-part">Производители:</span>
-          <div class="content">
-            <label class="text">
-              <span>Bosch</span>
-              <input type="checkbox" value="Bosch" />
-            </label>
-            <label class="text">
-              <span>Интерскол</span>
-              <input type="checkbox" value="Интерскол" />
-            </label>
-            <label class="text">
-              <span>Makita</span>
-              <input type="checkbox" value="Makita" />
-            </label>
-            <label class="text">
-              <span>Dewalt</span>
-              <input type="checkbox" value="Dewalt" />
-            </label>
-            <label class="text">
-              <span>Hitachi</span>
-              <input type="checkbox" value="Hitachi" />
-            </label>
-          </div>
-          <div class="left-filter">
-            <span class="filter-part">Питание:</span>
-            <div class="content">
-              <form action="input">
-                <label class="text">
-                  <span>Аккумуляторные</span>
-                  <input type="radio" name="питание" value="Аккумуляторные" />
-                </label>
-                <label class="text">
-                  <span>Сетевые</span>
-                  <input type="radio" name="питание" value="Сетевые" />
-                </label>
-              </form>
-            </div>
-            <form action="https://echo.htmlacademy.ru/">
-              <button>Показать</button>
-            </form>
-          </div>
-        </div>
-      </div>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <h3>Цена:</h3>
+          <!--Тут будет ползунок, label и form пока не убирал, жду лекции css-->
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+              <label for="Bosch">Bosch</label>
+                <input type="checkbox" name="Bosch" id="Bosch" checked />
+              </li>
+              <li>
+                <label for="Interskol">Интерскол</label>
+                <input type="checkbox" name="Interskol" id="Interskol" />
+              </li>
+              <li>
+                <legend for="Makita">Makita</legend>
+                <input type="checkbox" name="Makita" id="Makita" value="Makita" checked />
+              </li>
+              <li>
+                <legend for="Dewalt">Dewalt</legend>
+                <input type="checkbox" name="Dewalt" id="Dewalt" value="Dewalt" />
+              </li>
+              <li>
+                <legend for="Hitachi">Hitachi</legend>
+                <input type="checkbox" name="Hitachi" id="Hitachi" value="Hitachi" />
+              </li>
+            </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Питание:</legend>
+              <ul>
+                <li>                    
+                  <label for="filter-rechargeable">Аккумуляторные</label>
+                  <input type="radio" name="power" value="rechargeable" id="filter-rechargeable" />
+                  </li>   
+                  <li>  
+                  <legend for="filter-non-rechargeable">Сетевые</span>
+                  <input type="radio" name="power" value="non-rechargeable" id="filter-non-rechargeable" />
+                  </li>  
+                </ul>
+            </fieldset>
+                <button type="submit">Показать</button>
+        </form>
+      </section>
       <!--/фильтр-->
       <section>
         <h2>Перфораторы</h2>
@@ -367,5 +364,14 @@
         </p>
       </section>
     </footer>
+    <!--Попап Товар добавлен в корзину-->
+    <section>
+      <h3>Товар добавлен в корзину!</h3>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <button type="submit">Закрыть</button>
+        <button type="submit">Оформить заказ</button>
+        <button type="submit">Продолжить покупки</button>
+      </form>
+    </section>
   </body>
 </html>
