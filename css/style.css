@@ -110,9 +110,8 @@ a.footer-technomart-logo {
 a.footer-technomart-logo:active {
   background-color: var(--basic-dark-red);
 }
-.search {
+.search input[type="text"]::placeholder {
   font: inherit;
-  line-height: middle;
   color: var(--basic-white);
 }
 .search input[type="text"] {
@@ -245,9 +244,6 @@ li.registration a {
   text-align: center;
   vertical-align: middle;
   padding: 12px;
-}
-a.username:hover,
-a.username:focus {
 }
 a.log-in-link:hover,
 a.log-in-link:focus,
@@ -528,8 +524,6 @@ ul.delivery-services a {
   padding-right: 40px;
   padding-top: 11px;
   padding-bottom: 9px;
-  border: 2px solid;
-  box-sizing: border-box;
 }
 .about-header {
   font-family: "Cuprum", Arial, sans-serif;
