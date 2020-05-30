@@ -1,6 +1,7 @@
 /*Variables*/
 :root {
   --basic-red: #ee3643;
+  --basic-dark-red: #ba2732;
   --basic-green: #63a63e;
   --basic-green-light: #5fbb2d;
   --basic-extra-dark-blue: #293449;
@@ -18,22 +19,32 @@
   --basic-gray-price: #a9a9a9;
 }
 /*Global*/
+html {
+  box-sizing: border-box;
+}
+
+*,::before,::after {
+  box-sizing: inherit;
+}
 body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: PT Sans, Cuprum;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: var(--basic-black);
 }
 a {
   text-decoration: none;
-  color: var(--basic-white);
 }
 img {
   max-width: 100%;
   height: auto;
+}
+.container {
+  width: 940px;
+  margin: 0 auto;
 }
 /*header-navigation*/
 .main-header-logo {
@@ -44,30 +55,49 @@ img {
   padding-bottom: 17px;
 }
 .user-nav {
-  font: Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
   text-align: start;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
   background-color: var(--basic-extra-dark-blue);
 }
-button.green {
+a.green {
+  font: inherit;
   text-align: center;
   vertical-align: middle;
   color: var(--basic-white);
   background-color: var(--basic-green);
   border: none;
 }
-button.green:hover,
-button.green:focus {
+a.green:hover,
+a.green:focus {
   background-color: var(--basic-green-light);
 }
-button.green:active {
+a.green:active {
   background-color: var(--basic-green);
   opacity: 0.7;
 }
+a.technomart-logo {
+  padding-top: 12px;
+  padding-bottom: 17px;
+  padding-left: 55px;
+  padding-right: 57px;
+  background-color: var(--basic-red);
+  
+}
 a.technomart-logo:active {
-  opacity: 0.6;
+  background-color: var(--basic-dark-red) ;
+}
+a.footer-technomart-logo {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  padding-left: 41px;
+  padding-right: 41px;
+  background-color: var(--basic-red);
+}
+a.footer-technomart-logo:active {
+  background-color: var(--basic-dark-red);
 }
 .search {
   font: inherit;
@@ -80,8 +110,11 @@ a.technomart-logo:active {
   border: none;
   background-color: var(--basic-extra-dark-blue);
 }
-.button-search {
-  content: url(../img/icon-search.svg);
+a.link-bookmarks,
+a.link-cart {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
 }
 .link-bookmarks:hover,
 .link-bookmarks:focus {
@@ -105,7 +138,7 @@ a.technomart-logo:active {
   background-repeat: no-repeat;
 }
 .navigation-container {
-  font: Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   text-align: justify;
@@ -116,23 +149,6 @@ a.technomart-logo:active {
   background-repeat: no-repeat;
   list-style: none;
 }
-/*icons*/
-a.link-bookmarks::before {
-  content: url(../img/icon-bookmark.svg);
-}
-a.link-cart::before {
-  content: url(../img/icon-cart.svg);
-}
-.search::before {
-  content: url(../img/icon-search.svg);
-}
-p.phone::before {
-  content: url(../img/icon-phone.svg);
-}
-li.log-in a::before {
-  content: url(../img/icon-login.svg);
-}
-/*/icons*/
 .navigation-container li a {
   color: var(--basic-white);
 }
@@ -177,12 +193,15 @@ p.phone .red {
   color: var(--basic-red);
 }
 p.about-shop .red {
-  font: 16px, Cuprum, italic;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px; 
+  font-style: italic;
   line-height: 23px;
   color: var(--basic-red);
 }
 p.phone {
-  font: 21px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
   line-height: 30px;
   font-weight: bold;
   padding-left: 74px;
@@ -195,7 +214,8 @@ p.phone {
   color: var(--basic-dark-blue);
 }
 li.log-in a {
-  font: 21px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   line-height: 21px;
@@ -204,7 +224,8 @@ li.log-in a {
   padding: 12px;
 }
 li.registration a {
-  font: 21px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
   line-height: 21px;
@@ -228,7 +249,7 @@ a.my-lk:focus {
 /*/header-navigation*/
 /*about*/
 section.about {
-  font: 13px, PT sans;
+  font-size: 13px;
   line-height: 24px;
 }
 ul.delivery-services {
@@ -236,13 +257,16 @@ ul.delivery-services {
   list-style-position: inherit;
 }
 ul.delivery-services a {
-  font: 18px,Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
 }
 .about-us {
-  font: 14px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
   line-height: 18px;
+  color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-red);
   width: 220px;
@@ -254,18 +278,20 @@ ul.delivery-services a {
   box-sizing: border-box;
 }
 .about-header {
-  font: 30px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
 }
 .description {
-  font: 13px,PT Sans;
+  font-size: 13px;
   line-height: 24px;
 }
 /*/about*/
 /*footer*/
 .footer-navigation {
-  font: 18px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
   line-height: 24px;
   background-color: var(--basic-dark-blue);
 }
@@ -277,6 +303,9 @@ ul.footer-nav {
   text-align: left;
   width: auto;
   vertical-align: top;
+}
+ul.footer-nav a {
+  color: var(--basic-white);
 }
 ul.yellow-nav {
   list-style: none;
@@ -292,7 +321,8 @@ a.yellow-mail {
   color: var(--basic-yellow);
 }
 .footer-info {
-  font: 16px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-extra-dark-blue);
@@ -301,14 +331,8 @@ a.yellow-mail {
 ul.social-links {
   list-style: none;
 }
-a.social-vk::before {
-  content: url(../img/icon-vk.svg);
-}
-a.social-fb::before {
-  content: url(../img/icon-fb.svg);
-}
-a.social-insta::before {
-  content: url(../img/icon-insta.svg);
+ul.social-links a {
+  color: var(--basic-white);
 }
 /*Как сделать только картинки вместо текста, не понял еще*/
 a.social-vk:hover,
@@ -331,17 +355,12 @@ div.lk {
   padding: 12px;
 }
 a.username {
-  font: 21px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
   line-height: 21px;
   text-align: center;
   width: auto;
   color: var(--basic-black);
-}
-a.username::before {
-  content: url(../img/icon-user.svg);
-}
-a.username::after {
-  content: url(../img/icon-logout.svg);
 }
 div.order-list-lk a {
   color: var(--basic-black);
@@ -364,7 +383,8 @@ div.order-list-lk a {
   color: var(--basic-dark);
 }
 h2.catalog-section {
-  font: 30px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
   line-height: 30px;
   text-align: left;
   text-transform: uppercase;
@@ -375,7 +395,7 @@ h2.catalog-section {
 }
 /*filter*/
 .filter legend {
-  font-size: 17px, PT Sans;
+  font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
   font-weight: bold;
@@ -392,7 +412,7 @@ h2.catalog-section {
   color: var(--basic-dark-gray));
 }
 button.show-filter {
-  font: 13px, PT Sans;
+  font: 13px inherit;
   color: var(--basic-black);
   line-height: 18px;
   text-align: center;
@@ -411,20 +431,20 @@ button.show-filter {
 }
 .catalog-item h3,
 .catalog-item-flipside h3 {
-  font: 18px, PT Sans;
+  font-size: 18px;
   font-weight: bold;
   line-height: 20px;
   text-align: center;
   color: var(--basic-black);
 }
 p.item-price {
-  font: 17px, PT Sans;
+  font-size: 17px;
   line-height: 18px;
   text-align: center;
   color: var(--basic-gray-price);
 }
 p.sale-item-price {
-  font: 17px, PT Sans, bold;
+  font: 17px "PT Sans" bold;
   line-height: 18px;
   color: var(--basic-white);
   width: auto;
@@ -448,7 +468,8 @@ div.flipside {
   text-align: center;
 }
 a.buy {
-  font: 14px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
   text-align: center;
   vertical-align: middle;
   color: var(--basic-white);
@@ -462,7 +483,8 @@ a.buy {
 }
 /*не смог разобраться, почему разный размер в итоге на странице*/
 a.to-bookmarks {
-  font: 14px, Cuprum;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
   color: var(--basic-dark-blue);
   text-align: center;
   vertical-align: middle;
@@ -477,4 +499,7 @@ a.to-bookmarks {
   border-color: var(--basic-green);
   border-radius: 3px;
   border-width: 4px;
+}
+.visually-hidden {
+  display: none;
 }
