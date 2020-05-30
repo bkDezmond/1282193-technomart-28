@@ -4,8 +4,13 @@
   --basic-dark-red: #ba2732;
   --basic-green: #63a63e;
   --basic-green-light: #5fbb2d;
+  --basic-dark-green: #518534;
+  --basic-greeny: #8ed78f;
+  --basic-orange: #ffc047;
+  --basic-orange-light: #ffbf47;
   --basic-extra-dark-blue: #293449;
   --basic-dark-blue: #32425c;
+  --basic-blue: #3bbce3;
   --basic-black: #000000;
   --basic-extra-black: #161d29;
   --basic-grey-white: #f3f7f9;
@@ -17,13 +22,16 @@
   --basic-dark-gray: #b5b5b5;
   --basic-gray-border: #eaeaea;
   --basic-gray-price: #a9a9a9;
+  --basic-violet: #dc91d8;
 }
 /*Global*/
 html {
   box-sizing: border-box;
 }
 
-*,::before,::after {
+*,
+::before,
+::after {
   box-sizing: inherit;
 }
 body {
@@ -84,10 +92,9 @@ a.technomart-logo {
   padding-left: 55px;
   padding-right: 57px;
   background-color: var(--basic-red);
-  
 }
 a.technomart-logo:active {
-  background-color: var(--basic-dark-red) ;
+  background-color: var(--basic-dark-red);
 }
 a.footer-technomart-logo {
   padding-top: 20px;
@@ -159,10 +166,10 @@ a.link-cart {
 }
 a.head-menu:hover,
 a.head-menu:focus {
-  background-color:#293449 ;
+  background-color: #293449;
 }
 a.head-menu:active {
-  background-color: #1d2739 ;
+  background-color: #1d2739;
   opacity: 0.7;
 }
 a.foot-menu:hover,
@@ -194,7 +201,7 @@ p.phone .red {
 }
 p.about-shop .red {
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 16px; 
+  font-size: 16px;
   font-style: italic;
   line-height: 23px;
   color: var(--basic-red);
@@ -244,7 +251,7 @@ a.my-orders:hover,
 a.my-orders:focus,
 a.my-lk:hover,
 a.my-lk:focus {
-  color: var(--basic-red) ;
+  color: var(--basic-red);
 }
 /*/header-navigation*/
 /*about*/
@@ -409,7 +416,7 @@ h2.catalog-section {
 
 .filter-input-checkbox:hover,
 .filter-input-checkbox:focus {
-  color: var(--basic-dark-gray));
+  color: var(--basic-dark-gray);
 }
 button.show-filter {
   font: 13px inherit;
@@ -481,6 +488,13 @@ a.buy {
   background-position: center;
   border-radius: 3px;
 }
+a.buy:hover,
+a.buy:focus {
+  background-color: var(--basic-green-light);
+}
+a.buy:active {
+  background-color: var(--basic-dark-green);
+}
 /*не смог разобраться, почему разный размер в итоге на странице*/
 a.to-bookmarks {
   font-family: "Cuprum", Arial, sans-serif;
@@ -499,6 +513,13 @@ a.to-bookmarks {
   border-color: var(--basic-green);
   border-radius: 3px;
   border-width: 4px;
+}
+a.to-bookmarks:hover,
+a.to-bookmarks:focus {
+  border-color: var(--basic-dark-blue);
+}
+a.to-bookmarks:active {
+  opacity: 0.3;
 }
 .visually-hidden {
   display: none;
