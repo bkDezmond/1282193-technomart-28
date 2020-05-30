@@ -14,7 +14,7 @@
     <header>
       <nav>
         <div class="user-nav">
-          <div class="container">
+          <div class="container user-nav-wrapper">
             <a class="technomart-logo">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,34 +97,31 @@
 
     <main class="container">
       <!-- Не уверен на счет дивов, возможно нужно списком-->
-      <section>
-        <div>
-          <h3>Материалы</h3>
-          <a href="">На любой вкус</a>
+      <section class="main-grid-slider">
+        <div class="materials">
+          <h3 class="white-h3">Материалы</h3>
+          <a href="" class="link-materials">На любой вкус</a>
         </div>
-        <div>
-          <h3>Инструмент</h3>
-          <a href="">На все случаи</a>
+        <div class="tool">
+          <h3 class="white-h3">Инструмент</h3>
+          <a href="" class="link-tool">На все случаи</a>
         </div>
-        <div>
-          <h3>Техника</h3>
-          <a href="">Для стройки</a>
+        <div class="vehicle">
+          <h3 class="white-h3">Техника</h3>
+          <a href="" class="link-vehicle">Для стройки</a>
         </div>
-        <div>
-          <h3>Скидки 50%</h3>
-          <a href="">на 350 товаров</a>
+        <div class="sale-50">
+          <h3 class="white-h3">Скидки 50%</h3>
+          <a href="" class="link-sale-50">на 350 товаров</a>
         </div>
-        <div>
-          <h3>Доставка</h3>
-          <a href="">Бесплатно</a>
+        <div class="delivery">
+          <h3 class="white-h3">Доставка</h3>
+          <a href="" class="free-delivery">Бесплатно</a>
         </div>
         <!--слайдер-->
         <div class="slider">
-          <h2>Перфораторы</h2>
-          <p>Настоящие мужские игрушки</p>
-          <div class="slider-item">
-            <img src="img/Drills.jpg" width="620" height="266" alt="Дрели" />
-          </div>
+          <h2 class="white-h2">Перфораторы</h2>
+          <p class="slider-text">Настоящие мужские игрушки</p>
           <div class="slider-item">
             <img
               src="img/perforator.jpg"
@@ -133,17 +130,22 @@
               alt="Перфораторы"
             />
           </div>
+          <h2 class="white-h2">Дрели</h2>
+          <p class="slider-text">Соседям на радость!</p>
+          <div class="slider-item">
+            <img src="img/Drills.jpg" width="620" height="266" alt="Дрели" />
+          </div>
           <button class="slider-control-left"></button>
           <button class="slider-control-right"></button>
           <div class="button">
-            <a href="">Открыть каталог</a>
+            <a href="" class="go-to-catalog click-dark-red">Открыть каталог</a>
           </div>
         </div>
         <!--/slider-->
       </section>
-      <h2>Популярные товары:</h2>
-      <div class="button">
-        <button>Все Популярные товары</button>
+      <div class="popular">
+        <h2 class="dark-blue-h2">Популярные товары:</h2>
+        <a href="" class="link-button click-dark-red">Все Популярные товары</a>
       </div>
       <ul class="catalog-list">
         <li class="catalog-item">
@@ -217,11 +219,11 @@
           </p>
         </li>
       </ul>
-      <h2>Популярные производители:</h2>
-      <div class="button">
-        <button>Все производители</button>
+      <div class="popular-labels">
+        <h2 class="dark-blue-h2">Популярные производители:</h2>
+        <a href="" class="link-button click-dark-red"> Все производители</a>
       </div>
-      <ul>
+      <ul class="labels-list">
         <li>
           <a href=""
             ><img src="img/Bosch.png" width="126" height="37" alt="Bosch"
@@ -276,24 +278,24 @@
         </li>
       </ul>
       <!--Слайдер "сервисы"-->
-      <section>
-        <div>
+      <section class="container services-section">
+        <div class="services">
           <h2>Сервисы</h2>
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами!<br />
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
         </div>
-        <div>
+        <div class="service-slider">
           <ul>
-            <li><button>Доставка</button></li>
-            <li><button>гарантия</button></li>
-            <li><button>Кредит</button></li>
+            <li><button class="delivery-button">Доставка</button></li>
+            <li><button class="guarantee-button">Гарантия</button></li>
+            <li><button class="credit-button">Кредит</button></li>
           </ul>
         </div>
         <!--Пока что части слайдера в дивы обернул-->
-        <div>
-          <h2>Доставка</h2>
+        <div class="delivery-slide">
+          <h2 class="delivery-h2">Доставка</h2>
           <p>
             Мы с удовольствием доставим ваш товар прямо<br />
             к вашему подъезду совершенно бесплатно!<br />
@@ -307,8 +309,8 @@
             alt="Грузовик доставки"
           />
         </div>
-        <div>
-          <h2>Гарантия</h2>
+        <div class="guarantee-slide">
+          <h2 class="guarantee-h2">Гарантия</h2>
           <p>
             Если купленный у нас товар поломается или заискрит,<br />
             а также в случае пожара, спровоцированного его<br />
@@ -323,13 +325,13 @@
             alt="Знак гарантии"
           />
         </div>
-        <div>
-          <h2>Кредит</h2>
+        <div class="credit-slide">
+          <h2 class="credit-h2">Кредит</h2>
           <p>
             Залезть в долговую яму стало проще!<br />
             Кредитные консультанты придут вам на помощь.
           </p>
-          <a href="">Отправить заявку</a>
+          <a href="" class="send">Отправить заявку</a>
           <img src="img/credit.png" width="150" height="100" alt="Кредит" />
         </div>
       </section>
@@ -353,12 +355,12 @@
           <li><a href="">Автотрейдинг</a></li>
           <li><a href="">ЖелДорЭкспедиция</a></li>
         </ul>
-        <a href="" class="about-us">Подробнее о компании</a>
+        <a href="" class="about-us click-dark-red">Подробнее о компании</a>
       </section>
       <section class="contacts">
-        <h2 class="header-about">Контакты</h2>
+        <h2 class="about-header">Контакты</h2>
         <p class="description">
-          Вы можете забрать товар сами, заехва в наш офис:
+          Вы можете забрать товар сами, заехав в наш офис:
         </p>
         <p>
           <img
@@ -368,7 +370,9 @@
             alt="Карта магазина по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
           />
         </p>
-        <a href="" class="about-us">Заблудились? Напишите нам!</a>
+        <a href="" class="about-us click-dark-red"
+          >Заблудились? Напишите нам!</a
+        >
       </section>
     </main>
 

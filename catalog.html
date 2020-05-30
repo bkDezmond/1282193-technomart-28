@@ -14,7 +14,7 @@
     <header>
       <nav>
         <div class="user-nav">
-          <div class="container">
+          <div class="container user-nav-wrapper">
             <a class="technomart-logo" href="index.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,8 +50,8 @@
         <div class="header-cite-nav">
           <div class="container">
             <p class="about-shop">
-              <span class="red"
-                >Интернет-магазин <br />
+              <span class="red">
+                Интернет-магазин <br />
                 строительных материалов <br />
                 и инструментов для ремонта
               </span>
@@ -59,7 +59,7 @@
             <div>
               <p class="phone">
                 <a href="tel:+7(812)555-05-55"
-                  ><span class="red"> +7 (812) 555-05-55</span></a
+                  ><span class="red">+7 (812) 555-05-55</span></a
                 >
               </p>
               <p class="header-adress">
@@ -103,23 +103,22 @@
         <li><a href="">Перфораторы</a></li>
       </ul>
       <!--сортировка-->
-      <div class="left-filter">
-        <p>
-          Сортировка:
-          <button><span class="red">По цене</span></button>
-          <button>По типу</button>
-          <button>По функционалу</button>
-        </p>
+      <div class="sorting">
+        <p>Сортировка:
+          <button class="sort-button"><span class="red">По цене</span></button>
+          <button class="sort-button">По типу</button>
+          <button class="sort-button">По функционалу</button>
         <!--кнопки сортировки сверху вниз и наоборот-->
-        <button></button>
-        <button></button>
+          <button class="sort-button-up"></button>
+          <button class="sort-button-down"></button>
+      </p>
       </div>
       <!--/сортировка-->
       <!--фильтр-->
       <section class="filters">
-        <p>Фильтр:</p>
-        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
-          <label for="filter-price">Цена:</label>
+        <p class="filter">Фильтр:</p>
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+          <label for="filter-price"><span class="price-range">Цена:</span></label>
           <!--Тут будет ползунок, label и form пока не убирал, жду лекции css-->
           <input type="range" name="price" id="filter-price" />
           <fieldset>
@@ -342,12 +341,13 @@
         </ul>
       </section>
       <!--переключалка страниц каталога-->
-      <div class="buttons">
+      <div class="catalog-list-buttons">
         <button>1</button>
         <button>2</button>
         <button>3</button>
         <button>Следующая</button>
       </div>
+      <div class="about-items">
       <h2>Пара слов о перфораторах</h2>
       <p>
         Перфоратор — универсальный строительный инструмент. Предназначен для
@@ -358,6 +358,7 @@
         В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве
         будут совмещены отбойный молоток и ударная дрель.
       </p>
+    </div>
     </main>
 
     <footer>
