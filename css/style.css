@@ -65,7 +65,7 @@ img {
   height: auto;
 }
 .container {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -89,7 +89,6 @@ img {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 940px;
   justify-content: space-between;
   align-items: center;
 }
@@ -179,7 +178,7 @@ a.link-cart {
 }
 .header-cite-nav {
   width: 100%;
-  padding-bottom: 63px;
+  padding-bottom: 60px;
   background-color: var(--basic-grey-white);
   background-position: center;
   background-repeat: no-repeat;
@@ -190,20 +189,21 @@ a.link-cart {
   line-height: 24px;
   text-align: justify;
   vertical-align: middle;
-  width: auto;
   margin: 0;
   padding: 0;
   color: var(--basic-white);
   background-color: var(--basic-dark-blue);
   background-position: center, 0, 0;
   background-repeat: no-repeat;
-  padding: 10px;
+  padding-top: 16px;
+  padding-bottom: 20px;
   list-style: none;
 }
 .navigation-container ul {
   display: flex;
-  width: auto;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .menu a {
   color: var(--basic-white);
@@ -261,6 +261,7 @@ a.click-dark-red:active {
   width: 910px;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 0px;
+  padding-top: 41px;
 }
 p.phone .red {
   color: var(--basic-red);
@@ -332,19 +333,25 @@ a.my-lk:active {
 /*/header-navigation*/
 /*main*/
 /*main-grid-slider*/
+.main-grid-slider {
+  display: grid;
+  margin-top: 0;
+  gap: 20px;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 123px 123px 123px;
+}
+.slider {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
 /*Пока что поставил на кнопки-ссылки фоновый цвет, чтобы выделялись, по макету они прозрачные, это видимо декоративные волшебные штуки*/
-.materials {
-  background-color: var(--basic-orange-light);
-}
-.materials h3 {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: left;
-  vertical-align: middle;
-  color: var(--basic-white);
-}
-.materials a {
+.materials a,
+.tool a,
+.vehicle a,
+.sale-50 a,
+.delivery a {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -352,7 +359,27 @@ a.my-lk:active {
   vertical-align: middle;
   text-transform: uppercase;
   color: var(--basic-white);
+}
+.materials {
+  background-color: var(--basic-orange-light);
+}
+.materials h3 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 24px;
+  margin-left: 23px;
+  margin-top: 20px;
+  line-height: 30px;
+  text-align: left;
+  vertical-align: middle;
+  color: var(--basic-white);
+}
+.materials a {
   background-color: var(--basic-yellow);
+  margin-left: 23px;
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 23px;
 }
 .tool {
   background-color: var(--basic-blue);
@@ -361,18 +388,18 @@ a.my-lk:active {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
+  margin-left: 22px;
+  margin-top: 20px;
   text-align: left;
   vertical-align: middle;
   color: var(--basic-white);
 }
 .tool a {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--basic-white);
+  margin-left: 22px;
+  padding-top: 10px;
+  padding-right: 26px;
+  padding-bottom: 10px;
+  padding-left: 26px;
   background-color: var(--basic-dark-blue);
 }
 .vehicle {
@@ -382,18 +409,18 @@ a.my-lk:active {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
+  margin-left: 22px;
+  margin-top: 20px;
   text-align: left;
   vertical-align: middle;
   color: var(--basic-white);
 }
 .vehicle a {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--basic-white);
+  margin-left: 23px;
+  padding-top: 10px;
+  padding-right: 31px;
+  padding-bottom: 10px;
+  padding-left: 30px;
   background-color: var(--basic-gray);
 }
 .sale-50 {
@@ -403,18 +430,18 @@ a.my-lk:active {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
+  margin-left: 23px;
+  margin-top: 20px;
   text-align: left;
   vertical-align: middle;
   color: var(--basic-white);
 }
 .sale-50 a {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--basic-white);
+  margin-left: 23px;
+  padding-top: 10px;
+  padding-right: 23px;
+  padding-bottom: 10px;
+  padding-left: 22px;
   background-color: var(--basic-green-light);
 }
 .delivery {
@@ -424,20 +451,21 @@ a.my-lk:active {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
+  margin-left: 22px;
+  margin-top: 20px;
   text-align: left;
   vertical-align: middle;
   color: var(--basic-white);
 }
 .delivery a {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--basic-orange-light);
+  margin-left: 22px;
+  padding-top: 10px;
+  padding-right: 37px;
+  padding-bottom: 10px;
+  padding-left: 36px;
+  background-color: var(--basic-red);
 }
+*/
 /*slider*/
 /*не забыть поменять цвет на белый, как будет готов слайдер*/
 .slider h2 {
@@ -462,18 +490,27 @@ a.my-lk:active {
   background-color: var(--basic-red);
 }
 /*Popular*/
-div.popular,
-div.popular-labels {
+div.popular {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 59px;
+  margin-bottom: 20px;
   background-color: var(--basic-creamy);
 }
 .dark-blue-h2 {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  margin-top: 29px;
+  margin-left: 28px;
+  text-align: left;
   text-transform: uppercase;
   color: var(--basic-dark-blue);
 }
-a.link-button {
+a.link-button-popular {
+  align-self: center;
+  margin-right: 19px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   list-style: 18px;
@@ -482,29 +519,141 @@ a.link-button {
   color: var(--basic-white);
   text-transform: uppercase;
   background-color: var(--basic-red);
+  padding-top: 11px;
+  padding-right: 24px;
+  padding-bottom: 9px;
+  padding-left: 24px;
+}
+.popular-labels {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  background-color: var(--basic-creamy);
+}
+a.link-button-labels {
+  align-self: center;
+  margin-right: 19px;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  list-style: 18px;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+  padding-top: 11px;
+  padding-right: 38px;
+  padding-bottom: 9px;
+  padding-left: 39px;
+}
+.main-catalog-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: start;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 70px;
+  list-style: none;
+}
+.main-catalog-list h3 {
+  margin-top: 28px;
+  margin-right: 17px;
+  margin-bottom: 7px;
+  margin-left: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  color: var(--basic-black);
+}
+.main-catalog-item {
+  width: 220px;
+  min-height: 318px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: var(--basic-white);
+  border: solid var(--basic-gray-border);
 }
 /*labels-list*/
-ul.labels-list {
+.labels-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-content: start;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 70px;
   list-style: none;
+}
+.label-item {
+  width: 220px;
+  min-height: 145px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: var(--basic-white);
+  border: solid var(--basic-gray-border);
+}
+.label-item:nth-child(4) {
+  margin-right: 0;
 }
 /*для ховеров нужна лекция по декоративным элементам, при наведении и клике есть тень*/
 /*services-section*/
-.services-section {
+.services-section-background {
+  width: 100%;
+  margin-bottom: 70px;
+  padding-bottom: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: var(--basic-white-blue);
+}
+.services-section {
+  display: grid;
+  grid-template-columns: 320px 620px 1fr;
+}
+.services {
+  grid-column: 1 / -1;
 }
 .services h2 {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-top: 64px;
+  margin-bottom: 24px;
   text-transform: uppercase;
 }
 .services p {
   font: inherit;
   font-size: 13px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  margin-bottom: 70px;
+}
+.service-slider {
+  grid-column: 2 / 1;
+  margin: 0;
+  padding: 0;
+  align-items: end;
+}
+.service-slider-slides {
+  grid-column: 3 / 2;
+}
+.delivery-slide,
+.guarantee-slide,
+.credit-slide {
+  display: grid;
+  grid-template-columns: 447px 1fr;
+  grid-template-rows: min-content 1fr;
+  align-items: start;
 }
 .service-slider ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .delivery-button,
 .guarantee-button,
@@ -514,6 +663,9 @@ ul.labels-list {
   font-weight: bold;
   line-height: 30px;
   text-align: left;
+  width: 240px;
+  height: 61px;
+  padding-left: 22px;
   vertical-align: middle;
   color: var(--basic-white);
   background-color: var(--basic-dark-blue);
@@ -532,6 +684,7 @@ ul.labels-list {
   font-size: 30px;
   line-height: 24px;
   text-transform: uppercase;
+  margin: 0;
   color: var(--basic-dark-blue);
 }
 .delivery-slide p,
@@ -540,6 +693,10 @@ ul.labels-list {
   font: inherit;
   font-size: 13px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 35px;
 }
 .guarantee-slide h2 {
   font-family: "Cuprum", Arial, sans-serif;
@@ -552,6 +709,8 @@ ul.labels-list {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 24px;
+  margin: 0;
+  padding: 0;
   text-transform: uppercase;
   color: var(--basic-dark-blue);
 }
@@ -563,12 +722,17 @@ a.send {
   vertical-align: middle;
   color: var(--basic-white);
   background-color: var(--basic-red-light);
+  padding-top: 10px;
+  padding-right: 9px;
+  padding-bottom: 10px;
+  padding-left: 8px;
 }
 /*about*/
 .index-columns {
   display: flex;
   justify-content: space-between;
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 .index-columns h2 {
   margin: 0;
@@ -659,8 +823,8 @@ a.write-us {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .footer-navigation {
+  margin: 0;
   padding-bottom: 54px;
-  margin-top: 65px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -707,6 +871,7 @@ a.yellow-mail {
 .footer-info {
   padding-top: 35px;
   padding-bottom: 35px;
+  margin: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -837,12 +1002,6 @@ h2.catalog-section {
   background-color: var(--basic-white-blue);
   padding: 30px;
 }
-.page-catalog {
-  display: grid;
-  width: 940px;
-  grid-template-rows: 1fr 180px;
-  align-content: start;
-}
 .main-catalog {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -858,6 +1017,10 @@ h2.catalog-section {
 .main-catalog .sorting {
   grid-column: 1 /-1;
 }
+.sorting {
+  display: flex;
+  justify-content: space-between;
+}
 .catalog {
   margin-left: 20px;
   width: 700px;
@@ -872,6 +1035,22 @@ h2.catalog-section {
   margin-bottom: 20px;
   border: none;
 }
+.sorting-buttons {
+  display: flex;
+  justify-content: space-between;
+  font: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--basic-rich-creamy);
+  width: 700px;
+  padding-top: 10px;
+  padding-right: 17px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+}
 p.filter {
   font: inherit;
   font-size: 13px;
@@ -880,6 +1059,10 @@ p.filter {
   vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--basic-rich-creamy);
+  padding-top: 10px;
+  padding-right: 151px;
+  padding-bottom: 10px;
+  padding-left: 18px;
 }
 div.sorting p {
   font: inherit;
@@ -919,6 +1102,13 @@ div.sorting p {
   vertical-align: middle;
   text-transform: uppercase;
 }
+.price {
+  background-color: var(--basic-rich-creamy);
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-bottom: 39px;
+  padding-left: 20px;
+}
 .filter-form legend {
   font-size: 17px;
   line-height: 30px;
@@ -926,7 +1116,6 @@ div.sorting p {
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .filter-form ul {
   padding: 0;
   margin: 0;
@@ -944,10 +1133,15 @@ button.show-filter {
   color: var(--basic-black);
   line-height: 18px;
   text-align: center;
-  width: auto;
+  text-transform: uppercase;
   background-color: var(--basic-white);
   border: solid;
   border-color: #e5e5e5;
+  padding-top: 10px;
+  padding-right: 68px;
+  padding-bottom: 10px;
+  padding-left: 68px;
+  margin: 0;
 }
 /*catalog*/
 .catalog-list {
@@ -956,7 +1150,6 @@ button.show-filter {
   padding: 0;
   margin: 0;
   margin-bottom: 48px;
-
   list-style: none;
 }
 .catalog-item {
@@ -1082,6 +1275,9 @@ a.to-bookmarks:active {
   background: none;
   border: 1px solid var(--basic-gray-light);
   border-radius: 2px;
+  margin: 0px;
+  margin-right: 10px;
+  padding: 10px 15px;
 }
 .catalog-list-buttons button:hover,
 .catalog-list-buttons button:focus {
@@ -1090,8 +1286,12 @@ a.to-bookmarks:active {
 .catalog-list-buttons button:active {
   border-color: var(--basic-red);
 }
-div.about-items {
+.about-items-background {
   background-color: var(--basic-white-blue);
+  margin: 0;
+  padding: 0;
+  margin-top: 59px;
+  padding-bottom: 68px;
 }
 .about-items h2 {
   font-family: "Cuprum", Arial, sans-serif;
@@ -1100,6 +1300,8 @@ div.about-items {
   text-align: left;
   vertical-align: top;
   text-transform: uppercase;
+  padding-top: 64px;
+  padding-bottom: 25px;
 }
 .about-items p {
   font: inherit;
@@ -1107,6 +1309,8 @@ div.about-items {
   line-height: 24px;
   text-align: left;
   vertical-align: top;
+  padding: 0;
+  margin: 0;
 }
 .visually-hidden {
   display: none;

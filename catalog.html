@@ -98,8 +98,8 @@
       </nav>
     </header>
 
-    <main class="page-catalog container">
-      <section class="main-catalog">
+    <main>
+      <section class="main-catalog container">
       <h1 class="visually-hidden">Каталог</h1>
       <ul class="breadcrumbs">
         <li>
@@ -113,7 +113,7 @@
       <!--сортировка-->
       <div class="sorting">
         <p class="filter">Фильтр:</p>
-        <p>Сортировка:
+        <p class="sorting-buttons">Сортировка:
           <button class="sort-button"><span class="red">По цене</span></button>
           <button class="sort-button">По типу</button>
           <button class="sort-button">По функционалу</button>
@@ -128,7 +128,11 @@
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="filter-price"><span class="price-range">Цена:</span></label>
           <!--Тут будет ползунок, label и form пока не убирал, жду лекции css-->
-          <input type="range" name="price" id="filter-price" />
+          <div class="price"><input type="range" min="0" max="30000" name="price" class="price-scale" id="filter-price" /></div>
+          <div class="min-max-price">
+          <input type="text" class="min" name="min-price" value="0">
+          <input type="text" name="max-price" value="30000">
+          </div>
           <fieldset>
             <legend>Производители:</legend>
             <ul class="filter-list">
@@ -211,8 +215,7 @@
                 width="144"
                 height="125"
                 alt="Перфоратор BOSCH BFG 6000"/>
-              </a></p>
-              
+              </p></a>
             <p class="item-price"><del>30500 Р.</del></p>
             <p class="sale-item-price">
               25500 Р.
@@ -230,7 +233,7 @@
                 width="144"
                 height="128"
                 alt="Перфоратор BOSCH BFG 6000"/>
-              </a></p>
+              </p></a>
             <p class="item-price"><del>30500 Р.</del></p>
             <p class="sale-item-price">
               25500 Р.
@@ -260,7 +263,7 @@
                 width="127"
                 height="112"
                 alt="Перфоратор BOSCH BFG 3000"/>
-              </a></p>
+              </p></a>
             <p class="item-price"><del>22500 Р.</del></p>
             <p class="sale-item-price">
               15500 Р.
@@ -278,7 +281,7 @@
                 width="144"
                 height="125"
                 alt="Перфоратор BOSCH BFG 6000"/>
-            </a></p>
+            </p></a>
             <p class="item-price"><del>30500 Р.</del></p>
             <p class="sale-item-price">
               25500 Р.
@@ -296,7 +299,7 @@
                 width="127"
                 height="112"
                 alt="Перфоратор BOSCH BFG 2000"/>
-            </a></p>
+            </p></a>
             <p class="item-price hidden">нет цены</p>
             <p class="sale-item-price">
               12500 Р.
@@ -314,7 +317,7 @@
                 width="127"
                 height="112"
                 alt="Перфоратор BOSCH BFG 3000"/>
-            </a></p>
+            </p></a>
             <p class="item-price"><del>22500 Р.</del></p>
             <p class="sale-item-price">
               15500 Р.
@@ -332,7 +335,7 @@
                 width="144"
                 height="128"
                 alt="Перфоратор BOSCH BFG 6000"/>
-            </a></p>
+              </p></a>
             <p class="item-price"><del>30500 Р.</del></p>
             <p class="sale-item-price">
               25500 Р.
@@ -350,7 +353,7 @@
                 width="144"
                 height="128"
                 alt="Перфоратор BOSCH BFG 6000"/>
-          </a></p>
+          </p></a>
           <p class="item-price hidden">нет цены</p>
             <p class="sale-item-price">
               12500 Р.
@@ -366,7 +369,8 @@
       </section>
       <!--переключалка страниц каталога-->
       </section>
-      <div class="about-items">
+      <section class="about-items-background">
+      <div class="about-items container">
       <h2>Пара слов о перфораторах</h2>
       <p>
         Перфоратор — универсальный строительный инструмент. Предназначен для
@@ -378,6 +382,7 @@
         будут совмещены отбойный молоток и ударная дрель.
       </p>
     </div>
+      </section>
     </main>
 
     <footer>
