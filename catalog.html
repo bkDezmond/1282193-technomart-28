@@ -41,7 +41,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" class="search-icon"><path fill="currentColor" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
             </form>
             <a href="" class="link-bookmarks">Закладки: 0</a>
-            <a href="" class="link-cart">Корзина: 0</a>
+            <a href="" class="link-cart added">Корзина: 10</a>
             <a href="" class="green">Оформить заказ</a>
             </div>
             </div>
@@ -103,49 +103,69 @@
       <h1 class="not-visible">Каталог</h1>
       <ul class="breadcrumbs">
         <li class="home">
-          <a href="index.html"><span class="not-visible">Домой</span></a>
+          <a href="index.html"><span class="not-visible">Домой</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12"><g fill="#C1C6CE"><path d="M3 8v4h4V8h2v4h4V8L8 3.516z"/><path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"/></g></svg>
+          </a>
         </li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="">Инструмент</a></li>
-        <li class="breadcrumbs-current"><a href="">Перфораторы</a></li>
+        <li class="breadcrumbs-last"><a class="current" href="">Перфораторы</a></li>
       </ul>
       <h2 class="catalog-section">Перфораторы</h2>
       <!--сортировка-->
       <div class="sorting">
         <p class="filter">Фильтр:</p>
         <p class="sorting-buttons"><span class="sorting-catalog">Сортировка:</span>
-          <button class="sort-button"><span class="red">По цене</span></button>
-          <button class="sort-button">По типу</button>
-          <button class="sort-button">По функционалу</button>
-        <!--кнопки сортировки сверху вниз и наоборот-->
-          <button class="sort-button-up"></button>
-          <button class="sort-button-down"></button>
+          <a href="" class="sort-button by-price current">По цене</a>
+          <a href="" class="sort-button by-type">По типу</a>
+          <a href="" class="sort-button by-functional">По функционалу</a>
+        <!--кнопки сортировки сверху вниз и наоборот, поменять на ссылки-->
+          <a href="" class="sort-up current">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path class="sort-arrow" fill="currentColor" d="M5.5 0L0 10h11z"/></svg>
+          </a>
+          <a href="" class="sort-down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path class="sort-arrow" fill="currentColor" d="M5.5 10L0 0h11"/></svg>
+          </a>
       </p>
       </div>
       <!--/сортировка-->
       <!--фильтр-->
       <section class="filters">
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+         <fieldset class="filter-price">
           <label for="filter-price"><span class="price-range">Цена:</span></label>
-          <!--Тут будет ползунок, label и form пока не убирал, жду лекции css-->
-          <div class="price"><input type="range" min="0" max="30000" name="price" class="price-scale" id="filter-price" /></div>
-          <div class="min-max-price">
-          <input type="text" class="min" name="min-price" value="0">
-          <input type="text" name="max-price" value="30000">
-          </div>
-          <fieldset>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                    <p class="dash">—</p>
+                  </label>
+                  <label class="max-price">
+                    <input type="number" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>          
+            <fieldset>
             <legend>Производители:</legend>
             <ul class="filter-list">
               <li class="filter-option">
-                <input class="not-visible filter-input-checkbox filter-input" type="checkbox" name="Bosch" id="Bosch" checked />
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Bosch" id="Bosch" checked/>
                 <label for="Bosch">Bosch</label>
               </li>
               <li class="filter-option">
-                <input class="not-visible filter-input-checkbox filter-input" type="checkbox" name="Interskol" id="Interskol" />
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="Interskol" id="Interskol"/>
                 <label for="Interskol">Интерскол</label>
               </li>
               <li class="filter-option">
-                <input class="not-visible filter-input-checkbox filter-input"
+                <input class="visually-hidden filter-input-checkbox filter-input"
                   type="checkbox"
                   name="Makita"
                   id="Makita"
@@ -154,7 +174,7 @@
                 <label for="Makita">Makita</label>
               </li>
               <li class="filter-option">
-                <input class="not-visible filter-input-checkbox filter-input"
+                <input class="visually-hidden filter-input-checkbox filter-input"
                   type="checkbox"
                   name="Dewalt"
                   id="Dewalt"
@@ -162,7 +182,7 @@
                 <label for="Dewalt">Dewalt</label>
               </li>
               <li class="filter-option">
-                <input class="not-visible filter-input-checkbox filter-input"
+                <input class="visually-hidden filter-input-checkbox filter-input"
                   type="checkbox"
                   name="Hitachi"
                   id="Hitachi"
@@ -175,7 +195,7 @@
             <legend>Питание:</legend>
             <ul class="filter-list">
               <li class="filter-option">
-                <input class="not-visible filter-input-radio filter-input"
+                <input class="visually-hidden filter-input-radio filter-input"
                   type="radio"
                   name="power"
                   value="rechargeable"
@@ -184,7 +204,7 @@
                 <label for="filter-rechargeable">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <input class="not-visible filter-input-radio filter-input"
+                <input class="visually-hidden filter-input-radio filter-input"
                   type="radio"
                   name="power"
                   value="non-rechargeable"
@@ -394,10 +414,10 @@
           </li>
         </ul>
       <div class="catalog-list-buttons">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>Следующая</button>
+        <button class=" current">1</button>
+        <button class="">2</button>
+        <button class="">3</button>
+        <button class="">Следующая</button>
       </div>
       </section>
       <!--переключалка страниц каталога-->
@@ -447,7 +467,7 @@
           </a>
           <p class="footer-contacts">
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
-            +7 (812) 555-05-55
+            <a href="tel:+7(812)555-05-55"><span class="footer-phone">+7 (812) 555-05-55</span></a>
           </p>
           </div>
           <div class="footer-nav-yellow">

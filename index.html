@@ -125,7 +125,6 @@
     </header>
 
     <main>
-      <!-- Не уверен на счет дивов, возможно нужно списком-->
       <section class="main-grid-slider container">
         <div class="materials">
           <h3 class="white-h3">Материалы</h3>
@@ -147,37 +146,64 @@
           <h3 class="white-h3">Доставка</h3>
           <a href="" class="free-delivery">Бесплатно</a>
         </div>
-        <!--слайдер-->
-        <div class="slider">
-          <!--После позиционирования раскомментить
-          <h2 class="white-h2">Перфораторы</h2>
-          <p class="slider-text">Настоящие мужские игрушки</p>
-          -->
-          <div class="slider-item">
-            <img
-              src="img/perforator.jpg"
-              width="620"
-              height="266"
-              alt="Перфораторы"
-            />
-          </div>
-          <div class="not-visible">
-            <!--убрать/сменить класс после позиционирования-->
-            <h2 class="white-h2">Дрели</h2>
-            <p class="slider-text">Соседям на радость!</p>
-            <div class="slider-item">
-              <img src="img/Drills.jpg" width="620" height="266" alt="Дрели" />
+          <div class="slider-items slider-1">
+            <div class="slider-header"></div>
+            <ul class="slider-list">
+              <li class="slide slide-current">
+                <h2 class="slide-title">Перфораторы</h2>
+                <p class="slider-text">Настоящие мужские игрушки</p>
+                <a href="catalog.html" class="go-to-catalog click-dark-red slide-button"
+                  >Открыть каталог</a
+                >
+              </li>
+              <li class="slide">
+                <h2 class="slide-title">Дрели</h2>
+                <p class="slider-text">Соседям на радость!</p>
+                <a href="catalog.html" class="go-to-catalog click-dark-red slide-button"
+                  >Открыть каталог</a
+                >
+              </li>
+            </ul>
+            <div class="slider-controls">
+              <button
+                class="current slider-control-left"
+                aria-label="Первый слайд"
+              ></button>
+              <button
+                class="slider-control-right"
+                aria-label="Второй слайд"
+              ></button>
             </div>
-            <button class="slider-control-left"></button>
-            <button class="slider-control-right"></button>
-            <div class="button">
-              <a href="" class="go-to-catalog click-dark-red"
-                >Открыть каталог</a
-              >
+            <div class="slider-arrows">
+              <button class="arrow-left">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="40"
+                  viewBox="0 0 22 40"
+                >
+                  <path
+                    fill="#FFF"
+                    d="M19.83-.035l2.089 2.099L4.13 19.947l17.847 17.939-2.09 2.099L-.048 19.947z"
+                  />
+                </svg>
+              </button>
+              <button class="arrow-right">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="22"
+                  height="40"
+                  viewBox="0 0 22 40"
+                >
+                  <path
+                    fill="#FFF"
+                    d="M2.098-.035L.009 2.064l17.789 17.883L-.048 37.886l2.089 2.099 19.935-20.038z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
-        <!--/slider-->
       </section>
       <section class="main-catalog-items container">
         <div class="popular">
@@ -212,6 +238,7 @@
           </li>
 
           <li class="main-catalog-item">
+            <p class="catalog-new">New</p>
             <a href="">
               <h3>
                 Перфоратор BOSCH<br />
@@ -260,6 +287,7 @@
           </li>
 
           <li class="main-catalog-item">
+            <p class="catalog-new">New</p>
             <a href="">
               <h3>
                 Перфоратор BOSCH<br />
@@ -277,7 +305,7 @@
               <a href="" class="buy">Купить</a>
               <a href="" class="to-bookmarks">В Закладки</a>
             </div>
-            <p class="item-preice hidden">нет цены</p>
+            <p class="item-price hidden">нет цены</p>
             <p class="sale-item-price">
               12500 Р.
             </p>
@@ -358,59 +386,41 @@
             </p>
           </div>
           <div class="service-slider">
-            <ul>
-              <li><button class="delivery-button">Доставка</button></li>
-              <li><button class="guarantee-button">Гарантия</button></li>
-              <li><button class="credit-button">Кредит</button></li>
-            </ul>
-          </div>
-          <!--Пока что части слайдера в дивы обернул, два слайда not-visible-->
-          <div class="service-slider-slides">
-            <div class="delivery-slide not-visible">
-              <div>
-                <h2 class="delivery-h2">Доставка</h2>
-                <p>
-                  Мы с удовольствием доставим ваш товар прямо<br />
-                  к вашему подъезду совершенно бесплатно!<br />
-                  Ведь мы неплохо заработаем,<br />
-                  поднимая его на ваш этаж!
-                </p>
+            <div class="service-slider-3">
+              <ul class="service-slider-slides-1">
+                <li class="delivery-slide slide slide-current">
+                  <h2 class="delivery-h2">Доставка</h2>
+                  <p>
+                    Мы с удовольствием доставим ваш товар прямо<br />
+                    к вашему подъезду совершенно бесплатно!<br />
+                    Ведь мы неплохо заработаем,<br />
+                    поднимая его на ваш этаж!
+                  </p>
+                </li>
+                <li class="guarantee-slide slide">
+                  <h2 class="guarantee-h2">Гарантия</h2>
+                  <p>
+                    Если купленный у нас товар поломается или заискрит,<br />
+                    а также в случае пожара, спровоцированного его<br />
+                    возгоранием, вы всегда можете быть уверены в нашей<br />
+                    гарантии. Мы обменяем сгоревший товар на новый.<br />
+                    Дом уж восстановите как-нибудь сами.
+                  </p>
+                </li>
+                <li class="credit-slide slide">
+                  <h2 class="credit-h2">Кредит</h2>
+                  <p>
+                    Залезть в долговую яму стало проще!<br />
+                    Кредитные консультанты придут вам на помощь.
+                  </p>
+                  <a href="" class="send">Отправить заявку</a>
+                </li>
+              </ul>
+              <div class="service-slider-button">
+                <button class="delivery-button current">Доставка</button>
+                <button class="guarantee-button">Гарантия</button>
+                <button class="credit-button">Кредит</button>
               </div>
-              <img
-                src="img/Delivery.png"
-                width="150"
-                height="100"
-                alt="Грузовик доставки"
-              />
-            </div>
-            <div class="guarantee-slide not-visible">
-              <div>
-                <h2 class="guarantee-h2">Гарантия</h2>
-                <p>
-                  Если купленный у нас товар поломается или заискрит,<br />
-                  а также в случае пожара, спровоцированного его<br />
-                  возгоранием, вы всегда можете быть уверены в нашей<br />
-                  гарантии. Мы обменяем сгоревший товар на новый.<br />
-                  Дом уж восстановите как-нибудь сами.
-                </p>
-              </div>
-              <img
-                src="img/guarantee.png"
-                width="150"
-                height="100"
-                alt="Знак гарантии"
-              />
-            </div>
-            <div class="credit-slide">
-              <div>
-                <h2 class="credit-h2">Кредит</h2>
-                <p>
-                  Залезть в долговую яму стало проще!<br />
-                  Кредитные консультанты придут вам на помощь.
-                </p>
-                <a href="" class="send">Отправить заявку</a>
-              </div>
-              <img src="img/credit.png" width="150" height="100" alt="Кредит" />
             </div>
           </div>
         </div>
@@ -486,7 +496,7 @@
             </a>
             <p class="footer-contacts">
               г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
-              +7 (812) 555-05-55
+              <a href="tel:+7(812)555-05-55"><span class="footer-phone">+7 (812) 555-05-55</span></a>
             </p>
           </div>
           <div class="footer-nav-yellow">
@@ -587,8 +597,8 @@
       </section>
     </footer>
     <!--Попап карта-->
-    <section class="not-visible">
-      <section>
+    <section class="">
+      <section class="not-visible">
         <div class="map-container">
           <button class="close-popup-map">
             <span class="not-visible">Закрыть</span>
@@ -614,44 +624,55 @@
         </div>
       </section>
       <!--/Попап карта-->
-      <!--оформить заказ-->
-      <section>
-        <h2 hidden></h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="your-name">Ваше имя:</label>
+      <!--Напишите нам-->
+      <section class="modal write-us-popup not-visible">
+        <h2 hidden>Напишите нам</h2>
+        <button class="close-write-us"><span class="not-visible">Закрыть</span>
+          <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+        </button>
+        <form class="wrtie-us-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="modal-write">
+            <fieldset class="modal-popup-field your-name">
+              <legend>Ваше имя:</legend>
+          <p class="modal-name">
             <input
-              id="your-name"
               type="text"
               name="name"
               placeholder="Имя Фамилия"
               required
             />
-            <label for="email-email">Ваш e-mail:</label>
+          </p>
+        </fieldset>
+        <fieldset class="modal-popup-field email-email">
+          <legend>Ваш e-mail:</legend>
+          <p class="modal-email">
             <input
-              id="email-email"
               type="email"
               name="mail"
               placeholder="email@example.com"
               required
             />
           </p>
-          <p>
+          </fieldset>
+          <fieldset class="modal-popup-field text-message">
+            <legend>Текст письма:</legend>
+          <p class="modal-text-message">
             <!--нужно подумать над полем ввода текста письма-->
-            <label for="text-message">Текст письма:</label><br />
             <input
-              id="text-message"
               type="text"
               name="message"
               placeholder="В свободной форме"
             />
           </p>
-          <button type="submit">Отправить</button>
+          </fieldset>
           <!--кнопка закрыть попап-->
         </form>
-        <button>Закрыть</button>
+        </div>
+        <div class="modal-button">
+          <button type="submit" class="send-us">Отправить</button>
+        </div>
       </section>
     </section>
-    <!--/оформить заказ-->
+    <!--/Напишите нам-->
   </body>
 </html>
