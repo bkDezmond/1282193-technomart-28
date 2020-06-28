@@ -1065,7 +1065,7 @@ a.link-button-labels {
   min-width: 950px;
   min-height: 285px;
   margin: 0;
-  background-image: url("../img/delivery.png");
+  background-image: url("../img/delivery-slide.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -1075,7 +1075,7 @@ a.link-button-labels {
   flex-direction: row;
   min-width: 950px;
   min-height: 285px;
-  background-image: url("../img/guarantee.png");
+  background-image: url("../img/guarantee-slide.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -1085,7 +1085,7 @@ a.link-button-labels {
   flex-direction: row;
   min-width: 950px;
   min-height: 285px;
-  background-image: url("../img/credit.png");
+  background-image: url("../img/credit-slide.png");
   background-repeat: no-repeat;
   background-position: right;
 }
