@@ -2059,7 +2059,6 @@ p.sale-item-price {
   padding-top: 38px;
   padding-right: 44px;
   padding-left: 44px;
-  display: none;
   background-color: var(--basic-white);
 }
 .catalog-item:hover,
@@ -2342,14 +2341,7 @@ a.to-bookmarks:active {
   background-color: transparent;
   cursor: pointer;
 }
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
+
 .write-us-popup {
   position: fixed;
   z-index: 3;
@@ -2464,6 +2456,59 @@ a.to-bookmarks:active {
   padding-bottom: 80px;
   padding-left: 10px;
 }
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+  z-index: 4;
+}
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+/* Анимация */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /*отключалки. Почитать про доступность visually-hidden и не забыть поменять классы*/
 .not-visible {
   display: none;

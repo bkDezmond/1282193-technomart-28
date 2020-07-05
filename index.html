@@ -474,12 +474,13 @@
             заехав в наш офис:
           </p>
           <p class="img-map">
-            <img
-              src="img/map.png"
-              width="300"
-              height="158"
-              alt="Карта магазина по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
-            />
+            <a class="js-map" href=""
+              ><img
+                src="img/map.png"
+                width="300"
+                height="158"
+                alt="Карта магазина по адресу г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"
+            /></a>
           </p>
           <a href="" class="write-us click-dark-red"
             >Заблудились? Напишите нам!</a
@@ -621,7 +622,7 @@
     </footer>
     <!--Попап карта-->
     <section class="">
-      <section class="not-visible">
+      <section class="modal-map modal">
         <div class="map-container">
           <button class="close-popup-map">
             <span class="not-visible">Закрыть</span>
@@ -649,7 +650,7 @@
       </section>
       <!--/Попап карта-->
       <!--Напишите нам-->
-      <section class="modal write-us-popup not-visible">
+      <section class="write-us-popup modal">
         <h2 hidden>Напишите нам</h2>
         <button class="close-write-us">
           <span class="not-visible">Закрыть</span>
@@ -676,10 +677,10 @@
               <legend>Ваше имя:</legend>
               <p class="modal-name">
                 <input
+                  class="login-name"
                   type="text"
                   name="name"
                   placeholder="Имя Фамилия"
-                  required
                 />
               </p>
             </fieldset>
@@ -687,10 +688,10 @@
               <legend>Ваш e-mail:</legend>
               <p class="modal-email">
                 <input
+                  class="login-email"
                   type="email"
                   name="mail"
                   placeholder="email@example.com"
-                  required
                 />
               </p>
             </fieldset>
@@ -711,6 +712,30 @@
         </form>
       </section>
     </section>
-    <!--/Напишите нам-->
+    <section class="modal item-popup">
+      <div class="item-added">
+        <h3 class="popup-h3">Товар добавлен в корзину!</h3>
+        <button class="close-popup">
+          <span class="not-visible">Закрыть</span>
+          <svg
+            enable-background="new 0 0 21 21"
+            height="21"
+            viewBox="0 0 21 21"
+            width="21"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+              fill="#ee3643"
+            />
+          </svg>
+        </button>
+        <div class="cart-popup">
+          <a href="" class="order">Оформить заказ</a>
+          <button class="continue">Продолжить покупки</button>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
