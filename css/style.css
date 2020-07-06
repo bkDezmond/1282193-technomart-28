@@ -185,6 +185,11 @@ a.footer-technomart-logo-catalog {
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
+a.footer-technomart-logo svg,
+a.footer-technomart-logo-catalog svg {
+  fill: #fff;
+  fill-rule: evenodd;
+}
 a.footer-technomart-logo-catalog:active {
   background-color: var(--basic-dark-red);
 }
@@ -771,7 +776,7 @@ a.my-lk:active {
   background-image: url("../img/perforator.jpg");
 }
 .slider-2 {
-  background-image: url("../img/drills.jpg");
+  background-image: url("../img/drills-slide.jpg");
 }
 .slider-header {
   height: 104px;
