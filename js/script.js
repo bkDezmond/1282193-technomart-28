@@ -83,6 +83,7 @@ if (mapLink) {
 var buyLinks = [...document.querySelectorAll(".buy")];
 var itemAdded = document.querySelector(".item-popup");
 var closeItem = itemAdded.querySelector(".close-popup");
+var continueClose = itemAdded.querySelector(".continue");
 
 buyLinks.forEach((link) =>
   link.addEventListener("click", function (evt) {
@@ -93,4 +94,18 @@ buyLinks.forEach((link) =>
 closeItem.addEventListener("click", function (evt) {
   evt.preventDefault();
   itemAdded.classList.remove("modal-show");
+});
+
+continueClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  itemAdded.classList.remove("modal-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (itemAdded.classList.contains("modal-show")) {
+      evt.preventDefault();
+      itemAdded.classList.remove("modal-show");
+    }
+  }
 });
