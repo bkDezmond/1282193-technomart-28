@@ -38,6 +38,9 @@
   --basic-white-modal: #f4f4f4;
   --basic-violet: #dc91d8;
   --basic-light-white: rgba(255, 255, 255, 0.3);
+  --basic-dusk-dark: rgba(0, 0, 0, 0.4);
+  --basic-dark-dark: rgba(0, 0, 0, 0.24);
+  --basic-shadow-dark: rgba(0, 0, 0, 0.15);
 }
 /*Global*/
 html {
@@ -170,7 +173,7 @@ a.technomart-logo-catalog {
   height: 47px;
   margin: 0;
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--basic-dark-dark);
 }
 a.technomart-logo-catalog:active {
   background-color: var(--basic-dark-red);
@@ -183,11 +186,11 @@ a.footer-technomart-logo-catalog {
   width: 220px;
   height: 68px;
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--basic-dark-dark);
 }
 a.footer-technomart-logo svg,
 a.footer-technomart-logo-catalog svg {
-  fill: #fff;
+  fill: var(--basic-white);
   fill-rule: evenodd;
 }
 a.footer-technomart-logo-catalog:active {
@@ -344,6 +347,10 @@ a.link-cart {
   position: relative;
   display: flex;
   align-items: center;
+  word-break: break-all;
+}
+.index-phone {
+  width: 350px;
 }
 .user-lk li {
   position: absolute;
@@ -436,7 +443,6 @@ p.phone::before {
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.3;
 }
 .header-adress {
   display: flex;
@@ -455,8 +461,7 @@ p.phone::before {
   align-items: center;
   margin: 0;
   padding: 0;
-  padding-top: 6px;
-  padding-left: 20px;
+  padding-left: 14px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -780,7 +785,7 @@ a.my-lk:active {
 }
 .slider-header {
   height: 104px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--basic-dusk-dark);
 }
 .slider-list {
   margin: 0;
@@ -1003,11 +1008,11 @@ a.link-button-labels {
 }
 .label-item:hover,
 .label-item:focus {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--basic-shadow-dark);
 }
 .label-item:active {
   opacity: 0.5;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--basic-shadow-dark);
 }
 .label-item a {
   display: flex;
@@ -1090,7 +1095,9 @@ a.link-button-labels {
 .service-slider-slides-1 {
   order: 1;
   margin: 0;
+  width: 400px;
   list-style: none;
+  word-break: break-all;
 }
 .service-slider-button {
   display: flex;
@@ -1099,7 +1106,7 @@ a.link-button-labels {
 .service-slider-button .current {
   background-color: var(--basic-white);
   color: var(--basic-dark-blue);
-  box-shadow: 0px 1px 0px #ffffff;
+  box-shadow: 0px 1px 0px var(--basic-white);
 }
 .service-slider-button .current:hover,
 .service-slider-button .current:focus {
@@ -1408,18 +1415,15 @@ a.mail {
   line-height: 18px;
 }
 /*social*/
-.social {
-  justify-self: center;
-  width: 145px;
-}
 ul.social-links {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
   width: 140px;
   margin: 0;
   margin-left: 20px;
-  padding-right: 120px;
+  padding-right: 90px;
   list-style: none;
 }
 ul.social-links a {
@@ -1456,22 +1460,27 @@ a.social-insta:active {
 /*catalog head*/
 .container .adress-catalog {
   display: grid;
-  grid-template-columns: 250px 280px 1fr;
-  column-gap: 60px;
+  grid-template-columns: 260px 270px 300px;
+  column-gap: 55px;
   padding-top: 41px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
+  word-break: break-all;
 }
 .container .lk-and-order {
   display: grid;
   grid-template-rows: min-content auto;
   justify-content: stretch;
+  padding-top: 5px;
+}
+.phone-catalog {
+  padding-top: 5px;
 }
 .phone-number-catalog {
   position: relative;
   margin: 0;
-  padding-left: 80px;
-  padding-top: 8px;
-  padding-bottom: 3px;
+  padding-left: 76px;
+  padding-top: 4px;
+  padding-bottom: 8px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
@@ -1486,8 +1495,8 @@ a.social-insta:active {
 p.phone-number-catalog::before {
   content: "";
   position: absolute;
-  top: 15px;
-  left: 45px;
+  top: 10px;
+  left: 42px;
   width: 19px;
   height: 19px;
   background-image: url("../img/icon-phone.svg");
@@ -1496,7 +1505,8 @@ p.phone-number-catalog::before {
 }
 .order-list-lk ul {
   margin: 0;
-  margin-top: 7px;
+  padding: 0;
+  padding-left: 45px;
 }
 ul.lk-menu {
   display: flex;
@@ -1515,11 +1525,10 @@ a.username {
   position: relative;
   display: flex;
   align-items: stretch;
-  width: 290px;
-  padding-top: 16px;
-  padding-right: 57px;
-  padding-bottom: 8px;
-  padding-left: 47px;
+  width: 300px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 57px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
@@ -1528,12 +1537,12 @@ a.username {
 }
 .user-icon {
   position: absolute;
-  top: 18px;
-  left: 5px;
+  top: 12px;
+  left: 15px;
 }
 .logout-icon {
   position: absolute;
-  top: 18px;
+  top: 13px;
   right: 17px;
 }
 .username:hover path,
@@ -1544,7 +1553,7 @@ a.username {
   fill: var(--basic-gray);
 }
 div.order-list-lk a {
-  margin-right: 26px;
+  margin-right: 32px;
   margin-left: 0x;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
@@ -2060,7 +2069,7 @@ p.sale-item-price {
 }
 .catalog-item:hover,
 .main-catalog-item:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--basic-shadow-dark);
 }
 .catalog-item:hover .catalog-item-actions,
 .main-catalog-item:hover .catalog-item-actions {
@@ -2234,7 +2243,7 @@ a.to-bookmarks:active {
   border: none;
   border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--basic-shadow-dark);
 }
 .cart-popup {
   display: flex;
@@ -2326,7 +2335,7 @@ a.to-bookmarks:active {
   bottom: -186%;
   border: none;
   border-top: 7px solid var(--basic-red);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--basic-shadow-dark);
 }
 .close-popup-map {
   position: absolute;
